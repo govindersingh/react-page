@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Task1(props) {
+export default function Task3(props) {
     const [title, setTitle] = useState("");
     const [updatedValue, setUpdatedValue] = useState("");
 
@@ -17,7 +17,8 @@ export default function Task1(props) {
                 <div className="mb-3">
                     <input type="text" className="form-control" name='formInput_1' onChange={(e) => {setUpdatedValue(e.target.value)}} placeholder="Typing..." />
                 </div>
-                <button type="button" className="btn btn-primary" onClick={handleClick}>Submit</button>
+                <button type="button" className="btn btn-success me-1" onClick={handleClick}>Submit</button>
+                <button type="button" className="btn btn-primary" onClick={(e) => setTitle("")}>Clear</button>
               </div>
             </div>
         </div>
