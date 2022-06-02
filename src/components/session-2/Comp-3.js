@@ -1,8 +1,12 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 export default function Comp3(props) {
 
   const[c3, setC3] = useState(props.c3);
+
+  useEffect(() => {
+    setC3(props.c3)
+  }, [props])
 
   return (
     <>
@@ -15,7 +19,7 @@ export default function Comp3(props) {
                 type="text"
                 className="form-control"
                 placeholder="Typing..."
-                value={props.c3}
+                value={c3}
                 onChange={(e) => {setC3(e.target.value)}}
               />
             </div>

@@ -1,9 +1,14 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 export default function Comp1(props) {
 
   const[c2, setC2] = useState(props.c2);
   const[c3, setC3] = useState(props.c3);
+
+  useEffect(() => {
+    setC2(props.c2)
+    setC3(props.c3)
+  }, [props])
 
   function handleClick(){
     let data = {'component2': c2, 'component3': c3}
@@ -21,7 +26,7 @@ export default function Comp1(props) {
                 type="text"
                 className="form-control"
                 placeholder="For Component 2"
-                value={props.c2}
+                value={c2}
                 onChange={(e) => {setC2(e.target.value)}}
               />
             </div>
@@ -30,7 +35,7 @@ export default function Comp1(props) {
                 type="text"
                 className="form-control"
                 placeholder="For Component 3"
-                value={props.c3}
+                value={c3}
                 onChange={(e) => {setC3(e.target.value)}}
               />
             </div>

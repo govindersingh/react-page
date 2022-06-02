@@ -4,6 +4,10 @@ export default function Comp2(props) {
 
   const[c2, setC2] = useState(props.c2);
 
+  useEffect(() => {
+    setC2(props.c2)
+  }, [props])
+
   return (
     <>
       <div className="h-100">
@@ -15,7 +19,7 @@ export default function Comp2(props) {
                 type="text"
                 className="form-control"
                 placeholder="Typing..."
-                value={props.c2}
+                value={c2}
                 onChange={(e) => {setC2(e.target.value)}}
               />
             </div>
