@@ -1,14 +1,19 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
 export default function Comp1(props) {
 
-  const[c2, setC2] = useState(props.c2);
-  const[c3, setC3] = useState(props.c3);
+  const[c2, setC2] = useState('');
+  const[c3, setC3] = useState('');
 
-  useEffect(() => {
-    setC2(props.c2)
-    setC3(props.c3)
-  }, [props])
+  console.log(c2+'11', props.c2+'22');
+  // if(c2 !== props.c2){ 
+  //   setC2(props.c2)
+  // }
+
+  // if(c3 !== props.c3){ 
+  //   setC3(props.c3)
+  // }
+
 
   function handleClick(){
     let data = {'component2': c2, 'component3': c3}

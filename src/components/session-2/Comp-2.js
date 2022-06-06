@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 
 export default function Comp2(props) {
 
-  const[c2, setC2] = useState(props.c2);
+  const[c2, setC2] = useState('');
 
-  useEffect(() => {
+  if(props.c2 !== c2){
     setC2(props.c2)
-  }, [props])
+  }
 
   return (
     <>
