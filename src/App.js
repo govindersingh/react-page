@@ -5,9 +5,11 @@ import Session2 from "./components/session-2/Session-2";
 import Session3 from "./components/session-3/Session-3";
 import { Routes, Route, Link } from "react-router-dom";
 import ResultPage from "./components/session-3/ResultPage";
+import Tailwind from "./components/tailwind/Tailwind";
 
 function App() {
   return (
+    <>
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -15,6 +17,7 @@ function App() {
           <Link to="/" className="nav-item nav-link active">Session1</Link>
           <Link to="/session2" className="nav-item nav-link active">Session2</Link>
           <Link to="/session3" className="nav-item nav-link active">Session3</Link>
+          <Link to="/Tailwind" className="nav-item nav-link active">Tailwind-Page</Link>
           </div>
         </div>
       </nav>
@@ -24,8 +27,10 @@ function App() {
         <Route path="/session2" element={<Session2 />} />
         <Route path="/session3" element={<Session3 />} />
         <Route path="/result" element={<ResultPage />} />
+        <Route path="/Tailwind" element={<Tailwind />} />
       </Routes>
     </div>
+    </>
   );
 }
 
