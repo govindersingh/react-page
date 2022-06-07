@@ -2,10 +2,13 @@ import React, {useState} from "react";
 
 export default function Comp2(props) {
 
-  const[c2, setC2] = useState('');
+  const[c2, setC2] = useState(props.c2);
 
-  if(props.c2 !== c2){
+  const [check2, setCheck2] = useState(props.c2);
+  const data = props.c2;
+  if(check2 !== data){ 
     setC2(props.c2)
+    setCheck2(props.c2)
   }
 
   return (

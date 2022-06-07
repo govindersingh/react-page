@@ -5,14 +5,20 @@ export default function Comp1(props) {
   const[c2, setC2] = useState('');
   const[c3, setC3] = useState('');
 
-  // console.log(c2+'11', props.c2+'22');
-  // if(c2 !== props.c2){ 
-  //   setC2(props.c2)
-  // }
+  
+  const [check2, setCheck2] = useState(props.c2);
+  const data2 = props.c2;
+  if(check2 !== data2){ 
+    setC2(props.c2)
+    setCheck2(props.c2)
+  }
 
-  // if(c3 !== props.c3){ 
-  //   setC3(props.c3)
-  // }
+  const [check3, setCheck3] = useState(props.c3);
+  const data3 = props.c3;
+  if(check3 !== data3){ 
+    setC3(props.c3)
+    setCheck3(props.c3)
+  }
 
 
   function handleClick(){

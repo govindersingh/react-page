@@ -17,7 +17,7 @@ const Session3 = () => {
   };
 
 
-  const [pageproperties, setPageproperties] = useState(".")
+  const [pageproperties, setPageproperties] = useState("")
   const pageProperties = () => {
     navigate("/result", {state:{'result':pageproperties}});
   };
