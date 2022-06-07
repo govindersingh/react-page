@@ -5,7 +5,7 @@ export default function Comp1(props) {
   const[c2, setC2] = useState('');
   const[c3, setC3] = useState('');
 
-  console.log(c2+'11', props.c2+'22');
+  // console.log(c2+'11', props.c2+'22');
   // if(c2 !== props.c2){ 
   //   setC2(props.c2)
   // }
