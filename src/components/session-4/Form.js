@@ -15,7 +15,7 @@ const Form = () => {
             basic:{
                 email: event.target.emailaddress.value,
                 phone: event.target.phone.value,
-                gender: (event.target.gender.value === 'on') ? 'Male' : 'Female',
+                gender: event.target.gender.value,
                 hobbies: {
                     swimming: (event.target.swimming.checked ) ? true : false,
                     boxing: (event.target.boxing.checked ) ? true : false,
@@ -67,11 +67,11 @@ const Form = () => {
                         <fieldset>
                         <div className="text-base font-medium text-gray-900" aria-hidden="true">Gender</div>
                             <div className="flex items-center">
-                                <input id="push-everything" name="gender" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
+                                <input checked id="push-everything" value="Male" name="gender" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" />
                                 <label htmlFor="push-everything" className="ml-3 block text-sm font-medium text-gray-700"> Male </label>
                             </div>
                             <div className="flex items-center">
-                                <input id="push-email" name="gender" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"/>
+                                <input id="push-email" name="gender" value="Female" type="radio" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"/>
                                 <label htmlFor="push-email" className="ml-3 block text-sm font-medium text-gray-700"> Female </label>
                             </div>
                         </fieldset>
