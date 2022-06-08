@@ -6,6 +6,8 @@ import Session3 from "./components/session-3/Session-3";
 import { Routes, Route, Link } from "react-router-dom";
 import ResultPage from "./components/session-3/ResultPage";
 import Tailwind from "./components/tailwind/Tailwind";
+import Form from "./components/session-4/Form";
+import Formresult from "./components/session-4/Formresult";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
           <Link to="/" className="nav-item nav-link active">Session1</Link>
           <Link to="/session2" className="nav-item nav-link active">Session2</Link>
           <Link to="/session3" className="nav-item nav-link active">Session3</Link>
+          <Link to="/session4" className="nav-item nav-link active">Session4</Link>
           <Link to="/Tailwind" className="nav-item nav-link active">Tailwind-Page</Link>
           </div>
         </div>
@@ -27,6 +30,8 @@ function App() {
         <Route path="/session2" element={<Session2 />} />
         <Route path="/session3" element={<Session3 />} />
         <Route path="/result" element={<ResultPage />} />
+        <Route path="/session4" element={<Form />} />
+        <Route path="/form-result" element={<Formresult />} />
         <Route path="/Tailwind" element={<Tailwind />} />
       </Routes>
     </div>
