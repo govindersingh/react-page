@@ -8,6 +8,7 @@ import ResultPage from "./components/session-3/ResultPage";
 import Tailwind from "./components/tailwind/Tailwind";
 import Form from "./components/session-4/Form";
 import Formresult from "./components/session-4/Formresult";
+import Session5 from "./components/session-5/Session-5";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Link to="/session2" className="nav-item nav-link active">Session2</Link>
           <Link to="/session3" className="nav-item nav-link active">Session3</Link>
           <Link to="/session4" className="nav-item nav-link active">Session4</Link>
+          <Link to="/session5" className="nav-item nav-link active">Session5</Link>
           <Link to="/Tailwind" className="nav-item nav-link active">Tailwind-Page</Link>
           </div>
         </div>
@@ -32,6 +34,7 @@ function App() {
         <Route path="/result" element={<ResultPage />} />
         <Route path="/session4" element={<Form />} />
         <Route path="/form-result" element={<Formresult />} />
+        <Route path="/session5" element={<Session5 />} />
         <Route path="/Tailwind" element={<Tailwind />} />
       </Routes>
     </div>
